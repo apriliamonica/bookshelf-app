@@ -5,7 +5,7 @@
 }
 
 header {
-  background: rgb(138, 146, 248);
+  background: rgb(80, 80, 100);
   padding: 16px;
   color: white;
   justify-content: center;
@@ -15,28 +15,33 @@ header {
 .container {
   border-radius: 10px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background: rgb(204, 204, 204);
-  padding: 20px;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: center;
   margin: 20px;
-  width: 300px;
+  width: 96vw;
+  height: 55vh;
 }
 
 .tambah-buku {
-  margin-top: 20px;
-  padding: 10px 16px;
-  background: rgb(138, 146, 248);
+  width: 400px;
+  padding: 55px 60px;
+  background: rgb(180, 180, 184);
+  box-shadow: 9px 9px 9px 1px rgba(7, 7, 7, 0.6);
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .cari-buku {
   margin-top: 20px;
-  padding: 10px 16px;
-  background: rgb(138, 146, 248);
+  padding: 15px 60px;
+  background: rgb(199, 200, 204);
+  box-shadow: 9px 9px 9px 1px rgba(7, 7, 7, 0.6);
   color: white;
   border: none;
   border-radius: 10px;
@@ -45,20 +50,26 @@ header {
 
 .belum-baca {
   margin-top: 20px;
-  padding: 10px 16px;
-  background: rgb(138, 146, 248);
+  padding: 20px 60px;
+  background: rgb(180, 180, 184);
+  box-shadow: 9px 9px 9px 1px rgba(7, 7, 7, 0.6);
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  height: 370px;
+  width: 400px;
 }
 
 .selesai-baca {
   margin-top: 20px;
-  padding: 10px 16px;
-  background: rgb(138, 146, 248);
+  padding: 20px 60px;
+  background: rgb(180, 180, 184);
+  box-shadow: 9px 9px 9px 1px rgba(7, 7, 7, 0.6);
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  height: 370px;
+  width: 400px;
 }
