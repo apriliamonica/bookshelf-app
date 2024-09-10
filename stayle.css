@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: rgb(138, 146, 248);
+  padding: 16px;
+  color: white;
+  justify-content: center;
+  display: flex;
+}
+
+.container {
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgb(204, 204, 204);
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+}
+
+.tambah-buku {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background: rgb(138, 146, 248);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cari-buku {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background: rgb(138, 146, 248);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.belum-baca {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background: rgb(138, 146, 248);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.selesai-baca {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background: rgb(138, 146, 248);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
