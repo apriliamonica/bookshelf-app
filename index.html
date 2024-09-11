@@ -26,76 +26,74 @@
 
     <main>
       <div class="container">
-        <div class="buku">
-          <section class="tambah-buku">
-            <h2>Tambah Buku Baru</h2>
-            <form id="bookForm" data-testid="bookForm">
-              <div>
-                <label for="bookFormTitle">Judul</label>
-                <input
-                  id="bookFormTitle"
-                  type="text"
-                  required
-                  data-testid="bookFormTitleInput"
-                />
-              </div>
-              <div>
-                <label for="bookFormAuthor">Penulis</label>
-                <input
-                  id="bookFormAuthor"
-                  type="text"
-                  required
-                  data-testid="bookFormAuthorInput"
-                />
-              </div>
-              <div>
-                <label for="bookFormYear">Tahun</label>
-                <input
-                  id="bookFormYear"
-                  type="number"
-                  required
-                  data-testid="bookFormYearInput"
-                />
-              </div>
-              <div>
-                <label for="bookFormIsComplete">Selesai dibaca</label>
-                <input
-                  id="bookFormIsComplete"
-                  type="checkbox"
-                  data-testid="bookFormIsCompleteCheckbox"
-                />
-              </div>
-              <button
-                id="bookFormSubmit"
-                type="submit"
-                data-testid="bookFormSubmitButton"
-              >
-                Masukkan Buku ke rak <span>Belum selesai dibaca</span>
-              </button>
-            </form>
-          </section>
-
-          <section class="cari-buku">
-            <h2>Cari Buku</h2>
-            <form id="searchBook" data-testid="searchBookForm">
-              <label for="searchBookTitle">Judul</label>
+        <section class="tambah-buku" id="form">
+          <h2>Tambah Buku Baru</h2>
+          <form id="bookForm" data-testid="bookForm">
+            <div>
+              <label class="label-judul" for="bookFormTitle">Judul</label>
               <input
-                id="searchBookTitle"
+                id="bookFormTitle"
                 type="text"
-                data-testid="searchBookFormTitleInput"
+                required
+                data-testid="bookFormTitleInput"
               />
-              <button
-                id="searchSubmit"
-                type="submit"
-                data-testid="searchBookFormSubmitButton"
-              >
-                Cari
-              </button>
-            </form>
-          </section>
-        </div>
+            </div>
+            <div>
+              <label class="label-judul" for="bookFormAuthor">Penulis</label>
+              <input
+                id="bookFormAuthor"
+                type="text"
+                required
+                data-testid="bookFormAuthorInput"
+              />
+            </div>
+            <div>
+              <label class="label-judul" for="bookFormYear">Tahun</label>
+              <input
+                id="bookFormYear"
+                type="number"
+                required
+                data-testid="bookFormYearInput"
+              />
+            </div>
+            <div>
+              <label for="bookFormIsComplete">Selesai dibaca</label>
+              <input
+                id="bookFormIsComplete"
+                type="checkbox"
+                data-testid="bookFormIsCompleteCheckbox"
+              />
+            </div>
+            <button
+              id="bookFormSubmit"
+              type="submit"
+              data-testid="bookFormSubmitButton"
+            >
+              Masukkan Buku ke rak <span>Belum selesai dibaca</span>
+            </button>
+          </form>
+        </section>
 
-        <section class="belum-baca">
+        <section class="cari-buku" id="search">
+          <h2>Cari Buku</h2>
+          <form id="searchBook" data-testid="searchBookForm">
+            <label for="searchBookTitle">Judul</label>
+            <input
+              id="searchBookTitle"
+              type="text"
+              data-testid="searchBookFormTitleInput"
+            />
+            <button
+              id="searchSubmit"
+              type="submit"
+              data-testid="searchBookFormSubmitButton"
+            >
+              Cari
+            </button>
+          </form>
+        </section>
+
+        <section class="belum-baca" id="belum">
           <h2>Belum selesai dibaca</h2>
 
           <div id="incompleteBookList" data-testid="incompleteBookList">
@@ -118,7 +116,7 @@
           </div>
         </section>
 
-        <section class="selesai-baca">
+        <section class="selesai-baca" id="sudah">
           <h2>Selesai dibaca</h2>
 
           <div id="completeBookList" data-testid="completeBookList">

@@ -67,6 +67,7 @@ function createBookElement(bookObject) {
   const trashButton = document.createElement("button");
   trashButton.textContent = "hapus";
   trashButton.classList.add("trash-button");
+  trashButton.setAttribute("data-testid", "bookItemDeleteButton");
   trashButton.addEventListener("click", function () {
     removeTask(bookObject.id);
   });
@@ -74,6 +75,7 @@ function createBookElement(bookObject) {
   const editButton = document.createElement("button");
   editButton.textContent = "Edit";
   editButton.classList.add("edit-button");
+  editButton.setAttribute("data-testid", "bookItemEditButton");
   editButton.addEventListener("click", function () {
     editTask(bookObject.id);
   });
@@ -83,6 +85,7 @@ function createBookElement(bookObject) {
     const undoButton = document.createElement("button");
     undoButton.textContent = "Kembalikan";
     undoButton.classList.add("undo-button");
+    undoButton.setAttribute("data-testid", "bookItemIsCompleteButton");
     undoButton.addEventListener("click", function () {
       undoTaskFromCompleted(bookObject.id);
     });
@@ -93,11 +96,12 @@ function createBookElement(bookObject) {
     const checkButton = document.createElement("button");
     checkButton.textContent = "Dibaca";
     checkButton.classList.add("check-button");
+    checkButton.setAttribute("data-testid", "bookItemIsCompleteButton");
     checkButton.addEventListener("click", function () {
       addTaskToCompleted(bookObject.id);
     });
 
-    buttonAction.append(checkButton, editButton, trashButton);
+    buttonAction.append(checkButton, trashButton, editButton);
   }
 
   const bookActions = document.createElement("div");
@@ -150,7 +154,7 @@ function editTask(bookId) {
 }
 
 const searchBar = document.getElementById("searchBook");
-searchBar.addEventListener("input", function (event) {
+searchBar.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const searchInput = event.target.elements.searchBookTitle.value.toLowerCase();
@@ -232,40 +236,3 @@ function isStorageExist() {
   }
   return true;
 }
-
-// function isStorageExist() {
-//     return typeof localStorage!== "undefined";
-//     }
-//     document.addEventListener(RENDER_EVENT, function () {
-//         const belumBaca = document.getElementById("incompleteBookList");
-//         belumBaca.innerHTML = "";
-//         const selesaiBaca = document.getElementById("completeBookList");
-//         selesaiBaca.innerHTML = "";
-
-//         for (const book of books) {
-//           const bookElement = createBookElement(book);
-//           if (book.isComplete) {
-//             selesaiBaca.append(bookElement);
-//           } else {
-//             belumBaca.append(bookElement);
-//           }
-//         }
-//       });
-
-// function makeTodo(todoObject) {
-//   const { id, task, timestamp, isCompleted } = todoObject;
-
-//   const textTitle = document.createElement("h2");
-//   textTitle.innerText = task;
-
-//   const textTimestamp = document.createElement("p");
-//   textTimestamp.innerText = timestamp;
-
-//   const textContainer = document.createElement("div");
-//   textContainer.classList.add("inner");
-//   textContainer.append(textTitle, textTimestamp);
-
-//   const container = document.createElement("div");
-//   container.classList.add("item", "shadow");
-//   container.append(textContainer);
-//   container.setAttribute("id", `todo-${id}`);
