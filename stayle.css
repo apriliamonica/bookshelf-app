@@ -25,23 +25,32 @@ header {
 
 .tambah-buku {
   width: 400px;
-  padding: 55px 60px;
+  padding: 55px 10px;
   background: rgb(180, 180, 184);
-  box-shadow: 9px 9px 9px 1px rgba(7, 7, 7, 0.6);
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   margin-top: 20px;
+  height: 272px;
   display: flex;
   align-items: center;
 }
 
+.tambah-buku h2 {
+  margin-top: -200px;
+  text-wrap: nowrap;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  font-weight: bold;
+  color: rgb(80, 80, 100);
+}
+
 .cari-buku {
-  margin-top: 20px;
+  margin-top: 40px;
   padding: 15px 60px;
   background: rgb(199, 200, 204);
-  box-shadow: 9px 9px 9px 1px rgba(7, 7, 7, 0.6);
   color: white;
   border: none;
   border-radius: 10px;
@@ -52,12 +61,11 @@ header {
   margin-top: 20px;
   padding: 20px 60px;
   background: rgb(180, 180, 184);
-  box-shadow: 9px 9px 9px 1px rgba(7, 7, 7, 0.6);
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  height: 370px;
+  height: 390px;
   width: 400px;
 }
 
@@ -65,11 +73,10 @@ header {
   margin-top: 20px;
   padding: 20px 60px;
   background: rgb(180, 180, 184);
-  box-shadow: 9px 9px 9px 1px rgba(7, 7, 7, 0.6);
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  height: 370px;
+  height: 390px;
   width: 400px;
 }
