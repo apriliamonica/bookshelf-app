@@ -5,12 +5,24 @@
   font-family: sans-serif;
 }
 
+button,
+input {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+label {
+  font-weight: 400;
+}
+
 header {
   background: rgb(80, 80, 100);
   padding: 16px;
   color: white;
-  justify-content: center;
-  display: flex;
+  width: 100%;
+}
+header h1 {
+  text-align: center;
 }
 
 #form {
@@ -25,42 +37,54 @@ header {
 #sudah {
   grid-area: sudah;
 }
+main {
+  width: 100%;
+  padding-block: 2rem;
+  min-height: 100vh;
+}
+
+section {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 
 .container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 8%;
   display: grid;
   gap: 1rem;
   grid-template-areas:
+    "form form search search search search"
     "form form belum belum sudah sudah"
     "form form belum belum sudah sudah"
-    "search search belum belum sudah sudah";
+    "form form belum belum sudah sudah";
 }
 
 .tambah-buku {
-  margin: 20px;
-  padding: 20px;
+  padding: 1.5rem;
   background: rgb(180, 180, 184);
   color: white;
   border: none;
   border-radius: 10px;
   display: flex;
-  justify-content: center;
-  row-gap: 10px;
+  gap: 1rem;
   align-items: center;
   flex-direction: column;
 }
 
 .tambah-buku h2 {
   font-weight: bold;
-  color: rgb(80, 80, 100);
+  color: rgb(35, 35, 50);
+  text-align: center;
+  border-bottom: 1px solid rgb(80, 80, 100);
+  padding-bottom: 0.25rem;
 }
 
 #bookForm {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 85%;
-  padding: 5px;
-  color: rgb(0, 0, 0);
+  color: rgb(44, 44, 44);
 }
 
 #bookFormTitle,
@@ -68,71 +92,172 @@ header {
 #bookFormYear {
   width: 100%;
 }
-
 .label-judul {
   display: block;
+  margin-bottom: 0.25rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox input {
+  cursor: pointer;
+}
+
+#bookFormSubmit {
+  background: rgb(80, 80, 100);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#bookFormSubmit:hover {
+  background: rgb(45, 45, 63);
+}
+#bookFormSubmit:active {
+  background: rgb(35, 35, 50);
 }
 
 .cari-buku {
-  margin: 20px;
-  padding: 20px;
+  padding: 1rem 1.5rem 1rem;
   background: rgb(199, 200, 204);
   color: rgb(0, 0, 0);
   border: none;
   border-radius: 10px;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+#searchBook {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .cari-buku h2 {
-  text-wrap: nowrap;
   font-size: 20px;
   text-align: center;
-  position: relative;
   font-weight: bold;
-  color: rgb(80, 80, 100);
+  color: rgb(35, 35, 50);
+  border-bottom: 1px solid rgb(80, 80, 100);
+  padding-bottom: 0.25rem;
+}
+#searchBookTitle {
+  width: 100%;
 }
 
-.belum-baca {
-  margin-top: 20px;
-  padding: 20px 60px;
-  background: rgb(180, 180, 184);
+#searchSubmit {
+  background: rgb(80, 80, 100);
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
-  height: 390px;
-  width: 400px;
-  text-wrap: nowrap;
+}
+#searchSubmit:hover {
+  background: rgb(45, 45, 63);
+}
+#searchSubmit:active {
+  background: rgb(35, 35, 50);
 }
 
-.belum-baca h2 {
-  text-wrap: nowrap;
-  font-size: 20px;
-  text-align: center;
-  position: relative;
-  font-weight: bold;
-  color: rgb(80, 80, 100);
-}
-
+.belum-baca,
 .selesai-baca {
-  margin-top: 20px;
-  padding: 20px 60px;
   background: rgb(180, 180, 184);
   color: white;
   border: none;
   border-radius: 10px;
-  cursor: pointer;
-  height: 390px;
-  width: 400px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
 }
 
+.belum-baca * p,
+.selesai-baca * p {
+  margin-block: 0.5rem;
+  color: rgb(35, 35, 50);
+}
+.belum-baca * h3,
+.selesai-baca * h3 {
+  color: rgb(35, 35, 50);
+}
+
+.belum-baca h2,
 .selesai-baca h2 {
-  text-wrap: nowrap;
-  font-size: 20px;
   text-align: center;
-  position: relative;
   font-weight: bold;
-  color: rgb(80, 80, 100);
+  color: white;
+  font-size: 1.25rem;
+  border-bottom: 1px solid rgb(80, 80, 100);
+  padding-bottom: 0.5rem;
+}
+
+.trash-button,
+.check-button,
+.edit-button,
+.undo-button {
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  margin-inline: 0 0.25rem;
+  margin-block: 0.25rem 1rem;
+  border: 1px solid rgb(80, 80, 100);
+  border-radius: 5px;
+}
+.trash-button:hover,
+.check-button:hover,
+.edit-button:hover,
+.undo-button:hover {
+  background: rgb(100, 100, 120);
+  color: white;
+}
+.trash-button:active,
+.check-button:active,
+.edit-button:active,
+.undo-button:active {
+  background: rgb(45, 45, 63);
+  color: white;
+}
+
+footer {
+  background: rgb(80, 80, 100);
+  padding: 16px;
+  color: white;
+  width: 100%;
+}
+footer p {
+  text-align: center;
+}
+
+/* media query */
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-areas:
+      "form form"
+      "search search"
+      "belum sudah"
+      "belum sudah";
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    grid-template-areas:
+      "form"
+      "search"
+      "belum"
+      "sudah";
+  }
+  .trash-button,
+  .check-button,
+  .edit-button,
+  .undo-button {
+    padding: 0.25rem 0.5rem;
+    margin-inline: 0 0.2rem;
+  }
 }
